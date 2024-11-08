@@ -13,5 +13,8 @@ To re-execute the notebook you copy all the files to your local machine or to ot
 
 ## Containerization and Cloud deployment
 
-Provided Dockerfile is made for deployment. Run docker with command `docker build -t income-predict .`. _Be sure you have docker installed and running_. This will take some time and create docker image named  `income-predict`. Now you can try to use model localy. Go to `Use.ipynb` _OR_ `use_model.py` file. <p> **First run it as is**. It will go to my AWS sever where the model is already deployed and shouw you result.
-<p> Run docker with command `docker run -it --rm -p 9696:9696 income_predict`. Than change adress in url in the `use file` to your localhost and run it again, now you should have responce from aplication running in you local docker.
+Provided Dockerfile is made for deployment. Run docker with command `docker build -t income-predict .`. _Be sure you have docker installed and running_. This will take some time and create docker image named  `income-predict`. Now you can try to use model localy. Go to `Use.ipynb` _OR_ `use_model.py` file. <p> **First run it as is**. It will go to my AWS sever where the model is already deployed and shouw you result. <p>
+Run docker with command `docker run -it --rm -p 9696:9696 income_predict`. Than change address in url in the `use file` to your localhost and run it again, now you should have response from application running in you local docker.
+
+### Cloud deployment
+
