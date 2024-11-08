@@ -22,4 +22,11 @@ Run docker with command `docker run -it --rm -p 9696:9696 income_predict`. Than 
 I have deployed this model to AWS. _That was unexpactedly hard and long_. There where a lot of steps _(coomands proveded here use my AWS account, if you want to re-do it, you should use you account information)_:
 * Create an ECR Repository on AWS _(this includes create a account, use, key first)_
 * Tag Docker image: `docker tag income_predict 412381739886.dkr.ecr.eu-west-3.amazonaws.com/income_predict:latest`
-* Authenticate Docker with ECR and push the image: `docker push 412381739886.dkr.ecr.eu-west-3.amazonaws.com/income_predict:latest`
+* Authenticate Docker with ECR: `aws ecr get-login-password --region eu-west-3 | docker login --username AWS --password-stdin 412381739886.dkr.ecr.eu-west-3.amazonaws.com`
+* Push the image: `docker push 412381739886.dkr.ecr.eu-west-3.amazonaws.com/income_predict:latest`
+* Set Up an ECS Cluster (Powered by Fargate)
+* Create and run a Task to run aplication on that cluster
+
+To check it on AWS go to `Use.ipynb` _OR_ `use_model.py` file. set url to `url= 'http://35.180.97.11:9696/predict'` and run file. You may change data in `adult` dictionary to see other results.
+
+
