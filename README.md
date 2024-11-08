@@ -10,6 +10,7 @@ Dataset is provided as .csv file, but it is also downloadable through ucimlrepo.
 ## Model traineng
 I have tried different models: regression, design tree, random forest and Gradient Boosting. Tuning parameters for all of those. It was clear that regressing model has the worst results and Gradient Boosting gives much better AUC then all other models. See file `Data_analysys.ipynb` for data analizes and model training. <p>
 To re-execute the notebook you copy all the files to your local machine or to other github codespace. Than use pipenv environment from pipfile provided. Running `pipenv install` will automatically create virtual environment and install all necessary modules. Then use `pipenv shell` to enter the environment. Then just go throught `Data_analysys.ipynb`.
+As I mention earlier Gradient Boosting looks the best, so I chouse it as my final model. Final model training is prepared in file `train_and_save_model.py`. Running this file will result in training model with tuned parametes and saving it to the `model_gxb.bin` file. This file will be used be prediction function in `Use file`.
 
 ## Containerization and Cloud deployment
 
@@ -18,3 +19,7 @@ Run docker with command `docker run -it --rm -p 9696:9696 income_predict`. Than 
 
 ### Cloud deployment
 
+I have deployed this model to AWS. _That was unexpactedly hard and long_. There where a lot of steps _(coomands proveded here use my AWS account, if you want to re-do it, you should use you account information)_:
+* Create an ECR Repository on AWS _(this includes create a account, use, key first)_
+* Tag Docker image: `docker tag income_predict 412381739886.dkr.ecr.eu-west-3.amazonaws.com/income_predict:latest`
+* Authenticate Docker with ECR and push the image: `docker push 412381739886.dkr.ecr.eu-west-3.amazonaws.com/income_predict:latest`
