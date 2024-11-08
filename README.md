@@ -4,4 +4,5 @@ I was interested in finding some data on correlation between education level and
 I was interested in researching this dataset especially to see correlation of factors that influence income.
 So the task is to made a model based on current data to be able to predict for any person if they can expect an income over 50k.
 
-## 2nd name
+## Dataset
+Dataset is provided as .csv file, but it is also downloadable through ucimlrepo. In Jupyter and py files I will use .csv version, code to download dataset in there under comments (#)
