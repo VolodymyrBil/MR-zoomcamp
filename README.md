@@ -9,5 +9,6 @@ Dataset is provided as .csv file, but it is also downloadable through ucimlrepo.
 
 ## Model traineng
 I have tried different models: regression, design tree, random forest and Gradient Boosting. Tuning parameters for all of those. It was clear that regressing model has the worst results and Gradient Boosting gives much better AUC then all other models. See file `Data_analysys.ipynb` for data analizes and model training. <p>
-To re-execute the notebook you copy all the files to your local machine or to other github codespace. Than use pipenv environment from pipfile provided. Running `pipenv install` will automatically create virtual environment and install all necessary modules. Then use `pipenv shell` to enter the environment. Then just go throught <p>
+To re-execute the notebook you copy all the files to your local machine or to other github codespace. Than use pipenv environment from pipfile provided. Running `pipenv install` will automatically create virtual environment and install all necessary modules. Then use `pipenv shell` to enter the environment. Then just go throught `Data_analysys.ipynb`
 
+## Containerization and Cloud deployment
