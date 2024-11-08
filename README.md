@@ -26,7 +26,9 @@ I have deployed this model to AWS. _That was unexpactedly hard and long_. There 
 * Push the image: `docker push 412381739886.dkr.ecr.eu-west-3.amazonaws.com/income_predict:latest`
 * Set Up an ECS Cluster (Powered by Fargate)
 * Create and run a Task to run aplication on that cluster
-
-To check it on AWS go to `Use.ipynb` _OR_ `use_model.py` file. set url to `url= 'http://35.180.97.11:9696/predict'` and run file. You may change data in `adult` dictionary to see other results.
-
+* Set up requrity groups to allow acces to the tast from any IP
+  
+To check it on AWS go to `Use.ipynb` _OR_ `use_model.py` file. set url to `url= 'http://35.180.97.11:9696/predict'` and run file. You may change data in `adult` dictionary to see other results. <p>
+Screenshot from AWS:
+<img title="Screenshot from AWS" alt="Screenshot from AWS" src="/Screenshot_AWS.jpg">
 
